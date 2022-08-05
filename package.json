@@ -1,0 +1,17 @@
+{
+  "name": "projeto_banco_typescript",
+  "version": "1.0.0",
+  "description": "entrega de projeto typescript DIO",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "caio bruno",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.4"
+  }
+}
