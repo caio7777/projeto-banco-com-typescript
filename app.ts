@@ -45,12 +45,16 @@ class conta_banco{
 
     saque():number {
         let valor = document.getElementById("retirar") as HTMLInputElement
+        let k = parseFloat(valor.value);
+        if (k > this.saldo) {
+           console.log("saldo insuficiente!")
+               
+        }
         let resultado = this.saldo - +valor.value;
-        console.log(typeof valor.value + "value")
         this.saldo = resultado
-        console.log(typeof resultado)
         this.limpar();
         this.getsaldo()
+        console.log(typeof resultado)
         return resultado
     }
 

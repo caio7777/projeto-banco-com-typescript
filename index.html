@@ -161,18 +161,45 @@
         border: 2px solid black;
         margin: 10px;
       }
-      #n-conta {
-        border: 1px solid black;
-        width: 30%;
-        font-size: large;
+      .mconta {
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      #v-conta {
+        width: 20%;
       }
 
-      input[type="number"]::-webkit-inner-spin-button {
+      #insert-deposito[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
       }
-      input[type="number"] {
+      #insert-deposito[type="number"] {
         -moz-appearance: textfield;
         appearance: textfield;
+      }
+
+      #retirar[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      #retirar[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+      }
+
+      #v-conta[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      #v-conta[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      .texto-nconta {
+        font-size: 20px;
       }
     </style>
   </head>
@@ -182,9 +209,12 @@
       <div class="user-cont">
         <h2>Olá! Caio B A Almeida</h2>
       </div>
-      <label for="" id="n-conta"
-        >numero da conta:<input type="text" name="" id="v-conta"
-      /></label>
+      <div class="mconta">
+        <div>
+          <label class="texto-nconta" for="">N° da Conta: </label>
+        </div>
+        <input disabled type="number" name="" id="v-conta" />
+      </div>
       <label for="" class="saldo-desc">saldo</label>
 
       <div class="tela-saldo">
