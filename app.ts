@@ -1,3 +1,11 @@
+window.onload = function mostraNconta():void {
+    const num = document.getElementById("v-conta") as HTMLInputElement
+    let  nk = parseInt(num.value);
+    nk = 15478788
+
+    
+    
+}
 class conta_banco{
     nome
     numero_da_conta
@@ -43,19 +51,26 @@ class conta_banco{
         return resultado
     }
 
-    saque():number {
+    saque():void {
         let valor = document.getElementById("retirar") as HTMLInputElement
-        let k = parseFloat(valor.value);
-        if (k > this.saldo) {
-           console.log("saldo insuficiente!")
-               
+        let saque = parseFloat(valor.value);
+ 
+        if (saque > this.saldo) {
+            const msg = document.getElementById("msg-inicial") as HTMLInputElement
+            msg.style.display = "initial"
+               setTimeout(() => {
+                 msg.style.display = "none"
+               },5000);
+            
+            
+           
+        } else {
+
+            let resultado = this.saldo - +saque;
+            this.saldo = resultado
+            this.limpar();
+            this.getsaldo()
         }
-        let resultado = this.saldo - +valor.value;
-        this.saldo = resultado
-        this.limpar();
-        this.getsaldo()
-        console.log(typeof resultado)
-        return resultado
     }
 
        
